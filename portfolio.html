@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Azlan Salman's Portfolio</title>
+  <meta name="description" content="Personal portfolio: projects, skills, and contact information." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* root variables */
+    :root{
+      --bg:#3CAEA3; --panel:#20639B; --text:#000; --card:#fff; --border:#e2e8f0;
+      --accent:#D4B037; --shadow:0 10px 25px rgba(2,8,23,.08);
+    }
+
+    /* general body styling */
+    body{margin:0; font-family:Inter, sans-serif; background:var(--bg); color:var(--text)}
+
+    /* header with title */
+    header{padding:16px; text-align:center; background:rgba(255,255,255,.7); backdrop-filter:blur(6px); border-bottom:2px solid var(--accent)}
+    header h1{margin:0; font-size:22px; font-weight:700}
+
+    /* section styling */
+    section{background:var(--card); border-radius:20px; width:66%; margin:24px auto; box-shadow:var(--shadow); overflow:hidden; cursor:pointer}
+    section h2{margin:0; background:var(--panel); color:#fff; padding:16px; font-size:18px}
+
+    .content{max-height:0; opacity:0; overflow:hidden; padding:0 18px; transition:max-height .6s ease, opacity .6s ease, padding .6s ease}
+    section.active .content{max-height:800px; opacity:1; padding:18px}
+
+    /* button styling */
+    .btn{display:inline-block; margin:16px 0 4px; padding:8px 14px; border-radius:10px; border:1px solid var(--accent); background:#fff; font-weight:600;}
+
+    /* tags */
+    .tag{font-size:12px; padding:4px 8px; background:var(--accent); border-radius:999px; margin-right:6px; margin-top:6px; display:inline-block}
+    .tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:8px}
+
+    /* skills separator */
+    .skills-break{margin:24px 0; border:none; border-top:1px solid var(--border)}
+  </style>
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <h1>Azlan Salman's Portfolio</h1>
+  </header>
+
+  <main class="container">
+    <!-- projects section -->
+    <section id="projects" class="active">
+      <h2>Projects</h2>
+      <div class="content">
+        <h3>Research Paper — AudioSep with Contrastive Learning</h3>
+        <!-- tags to describe project -->
+        <div class="tags"><span class="tag">Paper</span><span class="tag">Audio ML</span><span class="tag">LASS</span></div>
+        <p>My machine-learning paper exploring fixed-SNR training and unsupervised contrastive pretraining for language-queried audio source separation.</p>
+        <!-- links for project -->
+        <div style="margin-top:20px">
+          <a class="btn" href="#">Read paper</a>
+          <a class="btn" href="#">Code/Appendix</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- education section -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="content">
+        <!-- current school -->
+        <h3>Willows Preparatory School</h3>
+        <div class="tags"><span class="tag">IB Diploma</span><span class="tag">Physics HL</span><span class="tag">Math AI HL</span><span class="tag">Clubs</span></div>
+        <p>Grades 10 — 12<br/>IB Diploma Programme; HL Physics & Math AI; clubs and research.</p>
+        <div style="margin-top:20px">
+          <a class="btn" href="https://willowsprep.com/" target="_blank">Visit Website</a>
+        </div>
+        <hr>
+        <!-- previous school -->
+        <h3>Woodinville Montessori</h3>
+        <div class="tags"><span class="tag">STEM</span><span class="tag">Programming</span><span class="tag">Engineering</span></div>
+        <p>Grades 9 — 10<br/>STEM-focused coursework, programming and engineering activities.</p>
+        <div style="margin-top:20px">
+          <a class="btn" href="https://www.woodinvillemontessori.org/" target="_blank">Visit Website</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- skills section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="content">
+        <!-- programming skills -->
+        <h3>Programming</h3>
+        <div class="tags">
+          <span class="tag">Java</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">C#</span>
+          <span class="tag">Python</span>
+        </div>
+
+        <hr class="skills-break">
+
+        <!-- education skills -->
+        <h3>Education</h3>
+        <div class="tags">
+          <span class="tag">Advanced Calculus</span>
+          <span class="tag">Advanced Physics</span>
+          <span class="tag">Advanced Chemistry</span>
+        </div>
+
+        <hr class="skills-break">
+
+        <!-- language skills -->
+        <h3>Languages</h3>
+        <div class="tags">
+          <span class="tag">English</span>
+          <span class="tag">Spanish</span>
+          <span class="tag">Urdu</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="content">
+        <form action="mailto:you@example.com" method="post" enctype="text/plain">
+          <!-- contact form fields -->
+          <label>Name<input required name="name"/></label>
+          <label>Email<input required type="email" name="email"/></label>
+          <label>Message<textarea required name="message"></textarea></label>
+          <div style="margin-top:20px">
+            <button class="btn" type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // allow sections to be toggled open/closed by clicking their header
+    const sections = document.querySelectorAll('main section');
+    sections.forEach(sec => {
+      const header = sec.querySelector('h2');
+      header.addEventListener('click', () => {
+        sec.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
