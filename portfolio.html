@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Azlan Salman's Portfolio</title>
+  <meta name="description" content="Personal portfolio: projects, skills, and contact information." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <h1>Azlan Salman's Portfolio</h1>
+  </header>
+
+  <main class="container">
+    <!-- projects section -->
+    <section id="projects" name="projects" class="active">
+      <h2>Projects</h2>
+      <div class="content">
+        <h3>Research Paper — AudioSep with Contrastive Learning</h3>
+        <!-- tags to describe project -->
+        <div class="tags"><span class="tag">Paper</span><span class="tag">Audio ML</span><span class="tag">LASS</span></div>
+        <p>My machine-learning paper exploring fixed-SNR training and unsupervised contrastive pretraining for language-queried audio source separation.</p>
+        <!-- project image -->
+      
+        <div style="margin-top:20px">
+          <a class="btn" href="#">Read paper</a>
+          <a class="btn" href="#">Code/Appendix</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- education section -->
+    <section id="education" name="education">
+      <h2>Education</h2>
+      <div class="content">
+        <!-- current school -->
+        <h3>Willows Preparatory School</h3>
+        <div class="tags"><span class="tag">IB Diploma</span><span class="tag">Physics HL</span><span class="tag">Math AI HL</span><span class="tag">Clubs</span></div>
+        <p>Grades 10 — 12<br/>IB Diploma Programme; HL Physics & Math AI; clubs and research.</p>
+        <img src="images/WPS.webp" alt="Willows Preparatory School" style="width:100%; max-width:250px; border-radius:8px; margin:10px 0;">
+        <div style="margin-top:20px">
+          <a class="btn" href="https://willowsprep.com/" target="_blank">Visit Website</a>
+        </div>
+        <hr>
+        <!-- previous school -->
+        <h3>Woodinville Montessori</h3>
+        <div class="tags"><span class="tag">STEM</span><span class="tag">Programming</span><span class="tag">Engineering</span></div>
+        <p>Grades 9 — 10<br/>STEM-focused coursework, programming and engineering activities.</p>
+        <img src="images/WMS.png" alt="Woodinville Montessori" style="width:100%; max-width:250px; border-radius:8px; margin:10px 0;">
+        <div style="margin-top:20px">
+          <a class="btn" href="https://www.woodinvillemontessori.org/" target="_blank">Visit Website</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- skills section -->
+    <section id="skills" name="skills">
+      <h2>Skills</h2>
+      <div class="content">
+        <!-- programming skills -->
+        <h3>Programming</h3>
+        <div class="tags">
+          <span class="tag">Java</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">C#</span>
+          <span class="tag">Python</span>
+        </div>
+
+        <hr class="skills-break">
+
+        <!-- education skills -->
+        <h3>Education</h3>
+        <div class="tags">
+          <span class="tag">Advanced Calculus</span>
+          <span class="tag">Advanced Physics</span>
+          <span class="tag">Advanced Chemistry</span>
+        </div>
+
+        <hr class="skills-break">
+
+        <!-- language skills -->
+        <h3>Languages</h3>
+        <div class="tags">
+          <span class="tag">English</span>
+          <span class="tag">Spanish</span>
+          <span class="tag">Urdu</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact section -->
+    <section id="contact" name="contact">
+      <h2>Contact</h2>
+      <div class="content">
+        <form action="mailto:you@example.com" method="post" enctype="text/plain">
+          <!-- contact form fields -->
+          <label>Name<input required name="name" placeholder="Your name"/></label>
+          <label>Email<input required type="email" name="email" placeholder="your.email@example.com"/></label>
+          <label>Message<textarea required name="message" placeholder="Your message here..."></textarea></label>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>
